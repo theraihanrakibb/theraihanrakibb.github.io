@@ -2,7 +2,7 @@
 
 Personal portfolio website for **MD RAKIBUL ISLAM RAIHAN** — ML Systems Engineer targeting 2027 New Grad roles in **LLM Inference / Multimodal AI** across Mainland China & Hong Kong (MNC & global AI R&D).
 
-🔗 **Live site:** https://theraihanrakibb.github.io/Online-Portfolio/
+🔗 **Live site:** https://theraihanrakibb.github.io/
 
 ## Highlights
 
