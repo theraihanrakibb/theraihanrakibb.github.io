@@ -49,6 +49,8 @@ nav.scrolled{background:rgba(8,11,20,.82);backdrop-filter:blur(20px);box-shadow:
 .nav-actions{display:flex;align-items:center;gap:8px}
 .nav-cv{padding:8px 16px;border-radius:50px;font-size:.8rem;font-weight:700;background:var(--grad);color:#080b14;white-space:nowrap;transition:transform .25s}
 .nav-cv:hover{transform:translateY(-2px)}
+.nav-cv-2{background:transparent;border:1px solid var(--border);color:var(--text)}
+@media(max-width:640px){.nav-cv-2{display:none}}
 .cmdk-hint{padding:8px 12px;border-radius:50px;font-size:.76rem;font-weight:600;background:var(--card);border:1px solid var(--border);color:var(--muted);cursor:pointer;white-space:nowrap;font-family:'JetBrains Mono',monospace}
 .cmdk-hint:hover{border-color:var(--accent);color:var(--accent)}
 .menu-btn{display:none;background:none;border:none;color:var(--text);font-size:1.4rem;cursor:pointer}
@@ -206,6 +208,9 @@ body.light .edu-logo .wm-for-dark{display:none}
 body.light .edu-logo .wm-for-light{display:block}
 .edu-card .edu-school{color:var(--muted);font-size:.95rem;font-weight:500;margin-bottom:2px;line-height:1.35}
 .edu-card .edu-univ{font-size:.88rem;font-weight:600;color:var(--text);margin-bottom:4px;line-height:1.45}
+.edu-card .edu-lab{font-size:.82rem;line-height:1.4;margin-bottom:2px}
+.edu-lab a{color:var(--accent);font-weight:600;text-decoration:none}
+.edu-lab a:hover{text-decoration:underline}
 .edu-univ a{color:var(--nwpu);text-decoration:none}
 .edu-univ a:hover{opacity:.85}
 .edu-univ a::after{content:'\2197';font-size:.75em;margin-left:3px;opacity:.8}
@@ -336,7 +341,8 @@ body.light .edu-univ a{color:#0e7490}
     </div>
     <div class="nav-actions">
       <button class="cmdk-hint" id="cmdkOpen" aria-label="Open command palette">&#8984;K</button>
-      <a class="nav-cv" href="assets/resume/Resume_Raihan_MLSys_NWPU_2027.pdf" target="_blank" data-i18n="nav.cv">CV</a>
+      <a class="nav-cv" href="assets/resume/Raihan_Technical_Resume.pdf" target="_blank" data-i18n="nav.cv">CV</a>
+      <a class="nav-cv nav-cv-2" href="assets/resume/Raihan_Research_Resume.pdf" target="_blank" data-i18n="nav.cv.research">Research CV</a>
       <button class="toggle-btn" id="themeBtn" aria-label="Toggle theme">&#9202;</button>
       <button class="toggle-btn" id="langBtn" aria-label="Toggle language">中</button>
       <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
@@ -358,8 +364,8 @@ body.light .edu-univ a{color:#0e7490}
         <div class="resume-dd" id="resumeDD">
           <button class="btn resume-toggle" id="resumeBtn" aria-haspopup="true" aria-expanded="false"><span data-i18n="btn.resume">Download Resume</span><span class="caret">&#9662;</span></button>
           <div class="resume-menu" id="resumeMenu" role="menu">
-            <a role="menuitem" href="assets/resume/Resume_Raihan_MLSys_NWPU_2027.pdf" target="_blank">Technical Resume (EN / 中文)</a>
-            <a role="menuitem" href="assets/resume/Resume_Raihan_PhD_NWPU_2027.pdf" target="_blank">PhD Academic CV (EN)</a>
+            <a role="menuitem" href="assets/resume/Raihan_Technical_Resume.pdf" target="_blank">Technical Resume (EN / 中文)</a>
+            <a role="menuitem" href="assets/resume/Raihan_Research_Resume.pdf" target="_blank">Research Resume / PhD CV (EN)</a>
           </div>
         </div>
       </div>
@@ -441,8 +447,8 @@ body.light .edu-univ a{color:#0e7490}
   <div class="container">
     <h2 class="sec-title fade-in" data-i18n="edu.title">Education &amp; <span>Credentials</span></h2>
     <div class="edu-grid">
-      <div class="edu-card fade-in"><span class="edu-logo"><img class="wm wm-for-dark" src="assets/images/nwpu-logo-white.png" alt="Northwestern Polytechnical University (NWPU)" width="240" height="50" loading="lazy" decoding="async"><img class="wm wm-for-light" src="assets/images/nwpu-logo-dark.png" alt="Northwestern Polytechnical University (NWPU)" width="240" height="50" loading="lazy" decoding="async"></span><h4 data-i18n="edu.me.h">M.Eng. in Software Engineering</h4><p class="edu-school" data-i18n="edu.me.s">School of Software</p><p class="edu-univ" data-i18n="edu.me.p"><a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">Northwestern Polytechnical University (NWPU)</a> <span class="edu-tag">985/211</span></p><p class="edu-date" data-i18n="edu.me.d">Sep 2024 &#8211; Jul 2027 | GPA 88/100 (Top 1%)</p><a href="https://github.com/theraihanrakibb/M.Eng-Thesis-Multimodal-Deepfake-Audio-Visual-Temporal-Framework" target="_blank" rel="noopener" class="edu-link" data-i18n="edu.me.link">Thesis PDF &#8594;</a></div>
-      <div class="edu-card fade-in"><span class="edu-logo"><img class="wm wm-for-dark" src="assets/images/nwpu-logo-white.png" alt="Northwestern Polytechnical University (NWPU)" width="240" height="50" loading="lazy" decoding="async"><img class="wm wm-for-light" src="assets/images/nwpu-logo-dark.png" alt="Northwestern Polytechnical University (NWPU)" width="240" height="50" loading="lazy" decoding="async"></span><h4 data-i18n="edu.be.h">B.Eng. in Computer Science &amp; Technology</h4><p class="edu-school" data-i18n="edu.be.s">School of Computer Science</p><p class="edu-univ" data-i18n="edu.be.p"><a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">Northwestern Polytechnical University (NWPU)</a> <span class="edu-tag">985/211</span></p><p class="edu-date" data-i18n="edu.be.d">Sep 2020 &#8211; Jul 2024 | GPA 85/100 (Top 1%)</p><a href="https://github.com/theraihanrakibb/B.Eng-Thesis-Design-and-Implementation-of-a-Distributed-Confidential-Query-Protocol-for-Spark" target="_blank" rel="noopener" class="edu-link" data-i18n="edu.be.link">Thesis PDF &#8594;</a></div>
+      <div class="edu-card fade-in"><span class="edu-logo"><img class="wm wm-for-dark" src="assets/images/nwpu-logo-white.png" alt="Northwestern Polytechnical University (NWPU)" width="240" height="50" loading="lazy" decoding="async"><img class="wm wm-for-light" src="assets/images/nwpu-logo-dark.png" alt="Northwestern Polytechnical University (NWPU)" width="240" height="50" loading="lazy" decoding="async"></span><h4 data-i18n="edu.me.h">M.Eng. in Software Engineering</h4><p class="edu-school" data-i18n="edu.me.s">School of Software</p><p class="edu-univ" data-i18n="edu.me.p"><a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">Northwestern Polytechnical University (NWPU)</a> <span class="edu-tag">985/211</span></p><p class="edu-lab" data-i18n="edu.me.lab">Research Lab: <a href="https://www.npu-aslp.org/" target="_blank" rel="noopener">ASLP@NPU</a></p><p class="edu-date" data-i18n="edu.me.d">Sep 2024 &#8211; Jul 2027 | GPA 88/100 (Top 1%)</p><a href="https://github.com/theraihanrakibb/M.Eng-Thesis-Multimodal-Deepfake-Audio-Visual-Temporal-Framework" target="_blank" rel="noopener" class="edu-link" data-i18n="edu.me.link">Thesis PDF &#8594;</a></div>
+      <div class="edu-card fade-in"><span class="edu-logo"><img class="wm wm-for-dark" src="assets/images/nwpu-logo-white.png" alt="Northwestern Polytechnical University (NWPU)" width="240" height="50" loading="lazy" decoding="async"><img class="wm wm-for-light" src="assets/images/nwpu-logo-dark.png" alt="Northwestern Polytechnical University (NWPU)" width="240" height="50" loading="lazy" decoding="async"></span><h4 data-i18n="edu.be.h">B.Eng. in Computer Science &amp; Technology</h4><p class="edu-school" data-i18n="edu.be.s">School of Computer Science</p><p class="edu-univ" data-i18n="edu.be.p"><a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">Northwestern Polytechnical University (NWPU)</a> <span class="edu-tag">985/211</span></p><p class="edu-lab" data-i18n="edu.be.lab">Advisor's current center: <a href="https://hcps.nwpu.edu.cn/#" target="_blank" rel="noopener">NWPU HCP Innovation Center</a></p><p class="edu-date" data-i18n="edu.be.d">Sep 2020 &#8211; Jul 2024 | GPA 85/100 (Top 1%)</p><a href="https://github.com/theraihanrakibb/B.Eng-Thesis-Design-and-Implementation-of-a-Distributed-Confidential-Query-Protocol-for-Spark" target="_blank" rel="noopener" class="edu-link" data-i18n="edu.be.link">Thesis PDF &#8594;</a></div>
     </div>
     <div class="honor-tags fade-in">
       <span class="honor-tag" data-i18n="honor.gov">&#127942; Chinese Gov Scholarship</span>
@@ -631,7 +637,7 @@ body.light .edu-univ a{color:#0e7490}
 <script>
 const I18N={
   en:{
-    'nav.home':'Home','nav.about':'About','nav.evidence':'Benchmarks','nav.exp':'Experience','nav.research':'Research','nav.projects':'Projects','nav.skills':'Skills','nav.contact':'Contact','nav.cv':'CV','nav.education':'Education',
+    'nav.home':'Home','nav.about':'About','nav.evidence':'Benchmarks','nav.exp':'Experience','nav.research':'Research','nav.projects':'Projects','nav.skills':'Skills','nav.contact':'Contact','nav.cv':'CV','nav.education':'Education','nav.cv.research':'Research CV',
     'avail':'🎓 Open to 2027 New Grad Roles | China &amp; Hong Kong',
     'heroTag':'LLM Inference Systems | GPU Optimization | Multimodal AI Research',
     'btn.touch':'Get in Touch','btn.evidence':'See Benchmarks','btn.projects':'View Projects','btn.resume':'Download Resume','btn.copy':'Copy','btn.go':'Go','btn.copied':'Copied',
@@ -668,8 +674,8 @@ const I18N={
     'chip.all':'All','chip.serving':'Serving','chip.observability':'Observability','chip.training':'Training','chip.lowprec':'Low-Precision','chip.rag':'RAG','chip.mlops':'MLOps','chip.systems':'Systems',
     'skills.title':'Technical <span>Skills</span>',
     'cat.llm':'LLM Inference &amp; Systems','cat.gpu':'GPU &amp; Performance','cat.ml':'ML &amp; Multimodal','cat.infra':'Distributed &amp; Infra','cat.lang':'Languages','cat.web':'Web, Embedded &amp; Tools','cat.research':'Research',
-    'edu.title':'Education &amp; <span>Credentials</span>','edu.me.h':'M.Eng. in Software Engineering','edu.me.s':'School of Software','edu.me.p':'<a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">Northwestern Polytechnical University (NWPU)</a> <span class="edu-tag">985/211</span>','edu.me.d':'Sep 2024 &#8211; Jul 2027 | GPA 88/100 (Top 1%)','edu.me.link':'Thesis PDF &#8594;',
-    'edu.be.h':'B.Eng. in Computer Science &amp; Technology','edu.be.s':'School of Computer Science','edu.be.p':'<a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">Northwestern Polytechnical University (NWPU)</a> <span class="edu-tag">985/211</span>','edu.be.d':'Sep 2020 &#8211; Jul 2024 | GPA 85/100 (Top 1%)','edu.be.link':'Thesis PDF &#8594;',
+    'edu.title':'Education &amp; <span>Credentials</span>','edu.me.h':'M.Eng. in Software Engineering','edu.me.s':'School of Software','edu.me.p':'<a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">Northwestern Polytechnical University (NWPU)</a> <span class="edu-tag">985/211</span>','edu.me.d':'Sep 2024 &#8211; Jul 2027 | GPA 88/100 (Top 1%)','edu.me.link':'Thesis PDF &#8594;','edu.me.lab':'Research Lab: <a href="https://www.npu-aslp.org/" target="_blank" rel="noopener">ASLP@NPU</a>',
+    'edu.be.h':'B.Eng. in Computer Science &amp; Technology','edu.be.s':'School of Computer Science','edu.be.p':'<a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">Northwestern Polytechnical University (NWPU)</a> <span class="edu-tag">985/211</span>','edu.be.d':'Sep 2020 &#8211; Jul 2024 | GPA 85/100 (Top 1%)','edu.be.link':'Thesis PDF &#8594;','edu.be.lab':'Advisor&#39;s current center: <a href="https://hcps.nwpu.edu.cn/#" target="_blank" rel="noopener">NWPU HCP Innovation Center</a>',
     'honor.gov':'&#127942; Chinese Gov Scholarship','honor.pres':'&#127942; Presidential Scholarship','honor.wu':'&#127942; Wu Yajun Scholarship','honor.thesis':'&#127942; Best Thesis Award','honor.out':'&#127942; Outstanding Graduate','honor.hack':'&#127942; Hackathon Winner',
     'cert.line':'&#127891; Deep Learning Specialization (DeepLearning.AI) &#183; Claude Academy: Claude Code in Action (Anthropic) &#183; AI Agents Fundamentals (Hugging Face)',
     'int.title':'Research <span>Interests</span>',
@@ -681,7 +687,7 @@ const I18N={
     'cs.problem':'Problem','cs.design':'Design','cs.why':'Why it matters'
   },
   zh:{
-    'nav.home':'首页','nav.about':'关于','nav.evidence':'基准','nav.exp':'经历','nav.research':'研究','nav.projects':'项目','nav.skills':'技能','nav.contact':'联系','nav.cv':'简历','nav.education':'教育',
+    'nav.home':'首页','nav.about':'关于','nav.evidence':'基准','nav.exp':'经历','nav.research':'研究','nav.projects':'项目','nav.skills':'技能','nav.contact':'联系','nav.cv':'简历','nav.cv.research':'研究简历','nav.education':'教育',
     'avail':'🎓 2027 应届求职 | 中国 &amp; 香港',
     'heroTag':'大模型推理系统 | GPU 优化 | 多模态 AI 研究',
     'btn.touch':'联系我','btn.evidence':'查看基准','btn.projects':'查看项目','btn.resume':'下载简历','btn.copy':'复制','btn.go':'前往','btn.copied':'已复制',
@@ -718,8 +724,8 @@ const I18N={
     'chip.all':'全部','chip.serving':'推理服务','chip.observability':'可观测性','chip.training':'训练','chip.lowprec':'低精度','chip.rag':'检索增强','chip.mlops':'模型运维','chip.systems':'系统',
     'skills.title':'技术<span>技能</span>',
     'cat.llm':'大模型推理与系统','cat.gpu':'GPU 与性能','cat.ml':'机器学习与多模态','cat.infra':'分布式与基础设施','cat.lang':'编程语言','cat.web':'Web、嵌入式与工具','cat.research':'研究',
-    'edu.title':'教育<span>背景</span>','edu.me.h':'软件工程硕士','edu.me.s':'软件学院','edu.me.p':'<a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">西北工业大学（NWPU）</a> <span class="edu-tag">985/211</span>','edu.me.d':'2024年9月 – 2027年7月 | GPA 88/100（前 1%）','edu.me.link':'论文 PDF &#8594;',
-    'edu.be.h':'计算机科学与技术学士','edu.be.s':'计算机学院','edu.be.p':'<a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">西北工业大学（NWPU）</a> <span class="edu-tag">985/211</span>','edu.be.d':'2020年9月 – 2024年7月 | GPA 85/100（前 1%）','edu.be.link':'论文 PDF &#8594;',
+    'edu.title':'教育<span>背景</span>','edu.me.h':'软件工程硕士','edu.me.s':'软件学院','edu.me.p':'<a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">西北工业大学（NWPU）</a> <span class="edu-tag">985/211</span>','edu.me.d':'2024年9月 – 2027年7月 | GPA 88/100（前 1%）','edu.me.link':'论文 PDF &#8594;','edu.me.lab':'研究实验室：<a href="https://www.npu-aslp.org/" target="_blank" rel="noopener">音频、语音与语言处理研究组（ASLP@NPU）</a>',
+    'edu.be.h':'计算机科学与技术学士','edu.be.s':'计算机学院','edu.be.p':'<a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">西北工业大学（NWPU）</a> <span class="edu-tag">985/211</span>','edu.be.d':'2020年9月 – 2024年7月 | GPA 85/100（前 1%）','edu.be.link':'论文 PDF &#8594;','edu.be.lab':'导师现任中心：<a href="https://hcps.nwpu.edu.cn/#" target="_blank" rel="noopener">西北工业大学人机物融合智能计算创新中心</a>',
     'honor.gov':'🏆 中国政府奖学金','honor.pres':'🏆 校长奖学金','honor.wu':'🏆 吴亚军奖学金','honor.thesis':'🏆 最佳论文奖','honor.out':'🏆 优秀毕业生','honor.hack':'🏆 黑客松冠军',
     'cert.line':'🎓 Deep Learning 专项课程（DeepLearning.AI） · Claude Academy: Claude Code in Action（Anthropic） · AI Agents Fundamentals（Hugging Face）',
     'int.title':'研究<span>兴趣</span>',
@@ -933,8 +939,10 @@ document.querySelectorAll('section[id]').forEach(s=>{
 });
 projects.forEach(p=>CMDK.push({t:'Project: '+p.n, a:'project.html?id='+encodeURIComponent(p.n), k:'Project'}));
 CMDK.push({t:'Case study: NVFP4-DiT', a:'project.html?id=nvfp4-dit', k:'Research', ext:true});
-CMDK.push({t:'Download Technical Resume (PDF)', a:'assets/resume/Resume_Raihan_MLSys_NWPU_2027.pdf', k:'PDF', ext:true});
-CMDK.push({t:'Download PhD Academic CV (PDF)', a:'assets/resume/Resume_Raihan_PhD_NWPU_2027.pdf', k:'PDF', ext:true});
+CMDK.push({t:'Download Technical Resume (PDF)', a:'assets/resume/Raihan_Technical_Resume.pdf', k:'PDF', ext:true});
+CMDK.push({t:'Download Research Resume / PhD CV (PDF)', a:'assets/resume/Raihan_Research_Resume.pdf', k:'PDF', ext:true});
+CMDK.push({t:'ASLP@NPU Research Lab', a:'https://www.npu-aslp.org/', k:'Lab', ext:true});
+CMDK.push({t:'NWPU HCP Innovation Center', a:'https://hcps.nwpu.edu.cn/#', k:'Lab', ext:true});
 CMDK.push({t:'Email', a:'mailto:raihanrakib.143@gmail.com', k:'Contact', ext:true});
 CMDK.push({t:'LinkedIn', a:'https://linkedin.com/in/theraihanrakib', k:'Contact', ext:true});
 CMDK.push({t:'GitHub', a:'https://github.com/theraihanrakibb', k:'Contact', ext:true});
