@@ -358,8 +358,8 @@ body.light .edu-univ a{color:#0e7490}
         <div class="resume-dd" id="resumeDD">
           <button class="btn resume-toggle" id="resumeBtn" aria-haspopup="true" aria-expanded="false"><span data-i18n="btn.resume">Download Resume</span><span class="caret">&#9662;</span></button>
           <div class="resume-menu" id="resumeMenu" role="menu">
-            <a role="menuitem" href="assets/resume/Resume_Raihan_MLSys_NWPU_2027.pdf" target="_blank">Resume (EN / 中文)</a>
-            <a role="menuitem" href="assets/resume/CL_Raihan_MLSys_NWPU_2027.pdf" target="_blank">Cover Letter (EN / 中文)</a>
+            <a role="menuitem" href="assets/resume/Resume_Raihan_MLSys_NWPU_2027.pdf" target="_blank">Technical Resume (EN / 中文)</a>
+            <a role="menuitem" href="assets/resume/Resume_Raihan_PhD_NWPU_2027.pdf" target="_blank">PhD Academic CV (EN)</a>
           </div>
         </div>
       </div>
@@ -452,7 +452,7 @@ body.light .edu-univ a{color:#0e7490}
       <span class="honor-tag" data-i18n="honor.out">&#127942; Outstanding Graduate</span>
       <span class="honor-tag" data-i18n="honor.hack">&#127942; Hackathon Winner</span>
     </div>
-    <p class="cert-line fade-in" data-i18n="cert.line">&#127891; AWS Certified Machine Learning &#8211; Specialty &#183; Professional Scrum Master I (PSM I) &#183; Deep Learning Specialization (DeepLearning.AI)</p>
+    <p class="cert-line fade-in" data-i18n="cert.line">&#127891; Deep Learning Specialization (DeepLearning.AI) &#183; Claude Academy: Claude Code in Action (Anthropic) &#183; AI Agents Fundamentals (Hugging Face)</p>
   </div>
 </section>
 
@@ -671,7 +671,7 @@ const I18N={
     'edu.title':'Education &amp; <span>Credentials</span>','edu.me.h':'M.Eng. in Software Engineering','edu.me.s':'School of Software','edu.me.p':'<a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">Northwestern Polytechnical University (NWPU)</a> <span class="edu-tag">985/211</span>','edu.me.d':'Sep 2024 &#8211; Jul 2027 | GPA 88/100 (Top 1%)','edu.me.link':'Thesis PDF &#8594;',
     'edu.be.h':'B.Eng. in Computer Science &amp; Technology','edu.be.s':'School of Computer Science','edu.be.p':'<a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">Northwestern Polytechnical University (NWPU)</a> <span class="edu-tag">985/211</span>','edu.be.d':'Sep 2020 &#8211; Jul 2024 | GPA 85/100 (Top 1%)','edu.be.link':'Thesis PDF &#8594;',
     'honor.gov':'&#127942; Chinese Gov Scholarship','honor.pres':'&#127942; Presidential Scholarship','honor.wu':'&#127942; Wu Yajun Scholarship','honor.thesis':'&#127942; Best Thesis Award','honor.out':'&#127942; Outstanding Graduate','honor.hack':'&#127942; Hackathon Winner',
-    'cert.line':'&#127891; AWS Certified Machine Learning &#8211; Specialty &#183; Professional Scrum Master I (PSM I) &#183; Deep Learning Specialization (DeepLearning.AI)',
+    'cert.line':'&#127891; Deep Learning Specialization (DeepLearning.AI) &#183; Claude Academy: Claude Code in Action (Anthropic) &#183; AI Agents Fundamentals (Hugging Face)',
     'int.title':'Research <span>Interests</span>',
     'int1.h':'AI Infrastructure','int1.p':'LLM inference systems, KV-cache architecture, PD disaggregation, RDMA-based distributed serving on multi-GPU clusters.',
     'int2.h':'Multimodal AI','int2.p':'Visual + audio + temporal fusion, deepfake detection, audio-guided video generation, cross-modal attention mechanisms.',
@@ -721,7 +721,7 @@ const I18N={
     'edu.title':'教育<span>背景</span>','edu.me.h':'软件工程硕士','edu.me.s':'软件学院','edu.me.p':'<a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">西北工业大学（NWPU）</a> <span class="edu-tag">985/211</span>','edu.me.d':'2024年9月 – 2027年7月 | GPA 88/100（前 1%）','edu.me.link':'论文 PDF &#8594;',
     'edu.be.h':'计算机科学与技术学士','edu.be.s':'计算机学院','edu.be.p':'<a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener">西北工业大学（NWPU）</a> <span class="edu-tag">985/211</span>','edu.be.d':'2020年9月 – 2024年7月 | GPA 85/100（前 1%）','edu.be.link':'论文 PDF &#8594;',
     'honor.gov':'🏆 中国政府奖学金','honor.pres':'🏆 校长奖学金','honor.wu':'🏆 吴亚军奖学金','honor.thesis':'🏆 最佳论文奖','honor.out':'🏆 优秀毕业生','honor.hack':'🏆 黑客松冠军',
-    'cert.line':'🎓 AWS 认证机器学习 — 专业级 · Professional Scrum Master I（PSM I） · Deep Learning 专项课程（DeepLearning.AI）',
+    'cert.line':'🎓 Deep Learning 专项课程（DeepLearning.AI） · Claude Academy: Claude Code in Action（Anthropic） · AI Agents Fundamentals（Hugging Face）',
     'int.title':'研究<span>兴趣</span>',
     'int1.h':'AI 基础设施','int1.p':'大模型推理系统、KV 缓存架构、PD 分离、基于 RDMA 的多 GPU 分布式服务。',
     'int2.h':'多模态 AI','int2.p':'视觉+音频+时序融合、深度伪造检测、音频引导视频生成、跨模态注意力机制。',
@@ -933,8 +933,8 @@ document.querySelectorAll('section[id]').forEach(s=>{
 });
 projects.forEach(p=>CMDK.push({t:'Project: '+p.n, a:'project.html?id='+encodeURIComponent(p.n), k:'Project'}));
 CMDK.push({t:'Case study: NVFP4-DiT', a:'project.html?id=nvfp4-dit', k:'Research', ext:true});
-CMDK.push({t:'Download Resume (PDF)', a:'assets/resume/Resume_Raihan_MLSys_NWPU_2027.pdf', k:'PDF', ext:true});
-CMDK.push({t:'Cover Letter (PDF)', a:'assets/resume/CL_Raihan_MLSys_NWPU_2027.pdf', k:'PDF', ext:true});
+CMDK.push({t:'Download Technical Resume (PDF)', a:'assets/resume/Resume_Raihan_MLSys_NWPU_2027.pdf', k:'PDF', ext:true});
+CMDK.push({t:'Download PhD Academic CV (PDF)', a:'assets/resume/Resume_Raihan_PhD_NWPU_2027.pdf', k:'PDF', ext:true});
 CMDK.push({t:'Email', a:'mailto:raihanrakib.143@gmail.com', k:'Contact', ext:true});
 CMDK.push({t:'LinkedIn', a:'https://linkedin.com/in/theraihanrakib', k:'Contact', ext:true});
 CMDK.push({t:'GitHub', a:'https://github.com/theraihanrakibb', k:'Contact', ext:true});

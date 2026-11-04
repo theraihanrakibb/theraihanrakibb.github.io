@@ -22,9 +22,8 @@ Personal portfolio website for **MD RAKIBUL ISLAM RAIHAN** — ML Systems Engine
 - `assets/og-image.png` — 1200×630 social preview image.
 - `assets/images/nwpu-seal.png` — Northwestern Polytechnical University seal shown on the education cards.
 - `assets/images/nwpu-logo-dark.png` / `nwpu-logo-white.png` — Transparent NWPU wordmark (navy for light theme, white for dark theme) used in this README via a dark-mode `<picture>` switch.
-- `assets/resume/Resume_Raihan_MLSys_NWPU_2027.pdf` — bilingual 2027 NWPU M.Eng. resume (English + 中文, 2 pages).
-- `assets/resume/CL_Raihan_MLSys_NWPU_2027.pdf` — bilingual cover letter (English + 中文, 2 pages).
-- `assets/resume/Resume_Raihan_NWPU_MS_2027.docx` — editable Word version of the resume.
+- `assets/resume/Resume_Raihan_MLSys_NWPU_2027.pdf` — technical 2027 resume (English + 中文, 2 pages, with photo).
+- `assets/resume/Resume_Raihan_PhD_NWPU_2027.pdf` — PhD academic CV (English only, 2 pages, no photo).
 
 ## Run locally
 
