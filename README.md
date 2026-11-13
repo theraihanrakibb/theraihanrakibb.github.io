@@ -51,11 +51,11 @@ Deployed on **GitHub Pages**. Push to the `main` branch — changes go live with
 </p>
 
 - **M.Eng. in Software Engineering** — School of Software, Northwestern Polytechnical University (NWPU), Sep 2024 – Jul 2027 · GPA 88/100 (Top 1%).
-  Thesis: [Detecting Deepfake Video by a Multimodal Audio-Visual Framework with Temporal Inconsistencies](https://github.com/theraihanrakibb/ddv_avti)
+  Thesis: [Detecting Deepfake Video by a Multimodal Audio-Visual Framework with Temporal Inconsistencies](https://github.com/theraihanrakibb/ml-research/tree/main/ddv_avti)
 - **B.Eng. in Computer Science & Technology** — School of Computer Science, Northwestern Polytechnical University (NWPU), Sep 2020 – Jul 2024 · GPA 85/100 (Top 1%).
-  Thesis: [Design and Implementation of a Distributed Confidential Query Protocol for Spark](https://github.com/theraihanrakibb/di-dcqps)
+  Thesis: [Design and Implementation of a Distributed Confidential Query Protocol for Spark](https://github.com/theraihanrakibb/ml-research/tree/main/di-dcqps)
 
 ## Related
 
 - Profile: [@theraihanrakibb](https://github.com/theraihanrakibb)
-- Research: [NVFP4-DiT](https://github.com/theraihanrakibb/NVFP4-DiT) · [M.Eng. Thesis](https://github.com/theraihanrakibb/ddv_avti) · [B.Eng. Thesis](https://github.com/theraihanrakibb/di-dcqps)
+- Research: [NVFP4-DiT](https://github.com/theraihanrakibb/ml-research/tree/main/NVFP4-DiT) · [M.Eng. Thesis](https://github.com/theraihanrakibb/ml-research/tree/main/ddv_avti) · [B.Eng. Thesis](https://github.com/theraihanrakibb/ml-research/tree/main/di-dcqps)

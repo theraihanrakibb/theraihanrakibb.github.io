@@ -125,7 +125,7 @@ const I18N={
 
 /* ---- Case-study data (architecture diagrams + benchmarks) ---- */
 const STUDIES={
-  'llm-gateway':{n:'llm-gateway',area:'Serving',areaZ:'推理服务',tag:'tag-blue',github:'https://github.com/theraihanrakibb/llm-gateway',live:'Open-source',
+  'llm-gateway':{n:'llm-gateway',area:'Serving',areaZ:'推理服务',tag:'tag-blue',github:'https://github.com/theraihanrakibb/ml-systems/tree/main/llm-gateway',live:'Open-source',
     problem:'Multi-tenant LLM traffic needs per-key limits, spend caps and provider failover — without rewriting every downstream app.',
     problemZ:'多租户大模型流量需要按密钥限流、成本上限与供应商故障转移，又不必重写每个下游应用。',
     design:'OpenAI-compatible proxy: per-key rate limits, cost caps with budget tracking, response caching and automatic provider fallback across multiple upstream LLM APIs.',
@@ -136,7 +136,7 @@ const STUDIES={
       edges:[{from:'cli',to:'rl',label:''},{from:'rl',to:'cc',label:''},{from:'cc',to:'rt',label:''},{from:'rt',to:'api',label:'fallback'}]},
     bench:[{m:'p99 added latency',v:'< 8 ms',c:'edge proxy overhead'},{m:'Tenants',v:'unlimited',c:'per-key isolation'},{m:'Providers',v:'5+',c:'pluggable backends'},{m:'Cache hit',v:'configurable',c:'token / response cache'}]},
 
-  'mini-serve':{n:'mini-serve',area:'Serving',areaZ:'推理服务',tag:'tag-blue',github:'https://github.com/theraihanrakibb/mini-serve',live:'Open-source',
+  'mini-serve':{n:'mini-serve',area:'Serving',areaZ:'推理服务',tag:'tag-blue',github:'https://github.com/theraihanrakibb/ml-systems/tree/main/mini-serve',live:'Open-source',
     problem:'Serving must batch dynamically and stream tokens without losing observability into queue depth and latency.',
     problemZ:'推理服务需动态批处理并流式输出，同时保留对队列深度与延迟的可观测性。',
     design:'Inference server: dynamic batching, SSE token streaming, and Prometheus metrics for queue, batch size and latency.',
@@ -147,7 +147,7 @@ const STUDIES={
       edges:[{from:'req',to:'bat'},{from:'bat',to:'exe'},{from:'exe',to:'sse'},{from:'exe',to:'met',label:'scrape'}]},
     bench:[{m:'Throughput',v:'batched',c:'continuous batching'},{m:'p50 TTFT',v:'low',c:'queue-aware scheduling'},{m:'Streaming',v:'SSE',c:'token-by-token'},{m:'Metrics',v:'PromQL',c:'out of the box'}]},
 
-  'kv-cache-sim':{n:'kv-cache-sim',area:'Serving',areaZ:'推理服务',tag:'tag-blue',github:'https://github.com/theraihanrakibb/kv-cache-sim',live:'Open-source',
+  'kv-cache-sim':{n:'kv-cache-sim',area:'Serving',areaZ:'推理服务',tag:'tag-blue',github:'https://github.com/theraihanrakibb/ml-systems/tree/main/kv-cache-sim',live:'Open-source',
     problem:'Cache eviction and PD-split policy are expensive to test on real GPU clusters.',
     problemZ:'缓存淘汰与 PD 分离策略在真实 GPU 集群上验证成本很高。',
     design:'KV-cache eviction + prefill/decode disaggregation simulator reporting TTFT/TPOT under configurable policies and load.',
@@ -158,7 +158,7 @@ const STUDIES={
       edges:[{from:'gen',to:'ev'},{from:'ev',to:'pd'},{from:'pd',to:'me'}]},
     bench:[{m:'Policies',v:'LRU/L2 / custom',c:'pluggable'},{m:'Output',v:'TTFT / TPOT',c:'per request'},{m:'Cost',v:'near-zero',c:'no GPUs needed'},{m:'Use',v:'pre-prod',c:'validate before deploy'}]},
 
-  'llm-bench':{n:'llm-bench',area:'Serving',areaZ:'推理服务',tag:'tag-blue',github:'https://github.com/theraihanrakibb/llm-bench',live:'Open-source',
+  'llm-bench':{n:'llm-bench',area:'Serving',areaZ:'推理服务',tag:'tag-blue',github:'https://github.com/theraihanrakibb/ml-systems/tree/main/llm-bench',live:'Open-source',
     problem:'Serving changes need repeatable latency, throughput and cost measurement.',
     problemZ:'推理改动需要可复现的延迟、吞吐与成本度量。',
     design:'LLM benchmark/eval harness: TTFT, TPOT, throughput, and a cost model per 1M tokens.',
@@ -169,7 +169,7 @@ const STUDIES={
       edges:[{from:'load',to:'sut'},{from:'sut',to:'col'},{from:'col',to:'cost'}]},
     bench:[{m:'TTFT / TPOT',v:'measured',c:'steady + burst'},{m:'Throughput',v:'tok/s',c:'concurrency sweep'},{m:'Cost',v:'$/1M tok',c:'provider-aware'},{m:'Reproducible',v:'yes',c:'seeded workloads'}]},
 
-  'gpu-exporter':{n:'gpu-exporter',area:'Observability',areaZ:'可观测性',tag:'tag-purple',github:'https://github.com/theraihanrakibb/gpu-exporter',live:'Open-source',
+  'gpu-exporter':{n:'gpu-exporter',area:'Observability',areaZ:'可观测性',tag:'tag-purple',github:'https://github.com/theraihanrakibb/ml-systems/tree/main/gpu-exporter',live:'Open-source',
     problem:'Utilisation and health of GPU fleets are invisible without metrics.',
     problemZ:'缺少指标时 GPU 集群的利用率与健康状态不可见。',
     design:'NVIDIA GPU Prometheus exporter (NVML) + a ready-made Grafana dashboard.',
@@ -180,7 +180,7 @@ const STUDIES={
       edges:[{from:'nv',to:'ex'},{from:'ex',to:'pr'},{from:'pr',to:'gr'}]},
     bench:[{m:'Scrape',v:'15s',c:'configurable interval'},{m:'GPUs',v:'fleet-wide',c:'multi-node'},{m:'Metrics',v:'util / mem / temp',c:'NVML surface'},{m:'Dashboards',v:'included',c:'Grafana JSON'}]},
 
-  'llmoops-trace':{n:'llmoops-trace',area:'Observability',areaZ:'可观测性',tag:'tag-purple',github:'https://github.com/theraihanrakibb/llmoops-trace',live:'Open-source',
+  'llmoops-trace':{n:'llmoops-trace',area:'Observability',areaZ:'可观测性',tag:'tag-purple',github:'https://github.com/theraihanrakibb/ml-systems/tree/main/llmoops-trace',live:'Open-source',
     problem:'LLM request cost and latency are hard to attribute across services.',
     problemZ:'大模型请求的成本与延迟难以跨服务归因。',
     design:'OpenTelemetry LLM tracing collector + Grafana dashboard correlating prompts, tokens and latency.',
@@ -191,7 +191,7 @@ const STUDIES={
       edges:[{from:'app',to:'ot'},{from:'ot',to:'ts'},{from:'ts',to:'gr'}]},
     bench:[{m:'Overhead',v:'< 2%',c:'sampling-aware'},{m:'Spans',v:'prompt/token',c:'per request'},{m:'Retention',v:'config',c:'backend-dependent'},{m:'Cost view',v:'yes',c:'token accounting'}]},
 
-  'train-launcher':{n:'train-launcher',area:'Training',areaZ:'训练',tag:'tag-blue',github:'https://github.com/theraihanrakibb/train-launcher',live:'Open-source',
+  'train-launcher':{n:'train-launcher',area:'Training',areaZ:'训练',tag:'tag-blue',github:'https://github.com/theraihanrakibb/ml-systems/tree/main/train-launcher',live:'Open-source',
     problem:'Multi-node training jobs fail and need supervision plus automatic retry.',
     problemZ:'多节点训练任务会失败，需要监控与自动重试。',
     design:'Fault-tolerant multi-node PyTorch training launcher with health monitoring and auto-retry on node failure.',
@@ -202,7 +202,7 @@ const STUDIES={
       edges:[{from:'spec',to:'sch'},{from:'sch',to:'wk'},{from:'wk',to:'mon',label:'heartbeat'},{from:'mon',to:'rt'},{from:'rt',to:'wk',label:'restart'}]},
     bench:[{m:'Recovery',v:'auto',c:'node-aware'},{m:'Topology',v:'Slurm/K8s',c:'pluggable'},{m:'Retries',v:'bounded',c:'exponential backoff'},{m:'Scale',v:'multi-node',c:'NCCL ready'}]},
 
-  'quant-playground':{n:'quant-playground',area:'Low-Precision',areaZ:'低精度',tag:'tag-purple',github:'https://github.com/theraihanrakibb/quant-playground',live:'Open-source',
+  'quant-playground':{n:'quant-playground',area:'Low-Precision',areaZ:'低精度',tag:'tag-purple',github:'https://github.com/theraihanrakibb/ml-systems/tree/main/quant-playground',live:'Open-source',
     problem:'Low-precision formats are hard to understand without hands-on bit-packing.',
     problemZ:'不亲自动手位打包，很难理解低精度格式。',
     design:'FP8/FP4/INT8/INT4 bit-packing reference plus a numpy MLP quantization demo with accuracy/size reporting.',
@@ -213,7 +213,7 @@ const STUDIES={
       edges:[{from:'fmt',to:'pk'},{from:'pk',to:'mlp'},{from:'mlp',to:'rep'}]},
     bench:[{m:'Formats',v:'FP8/FP4/INT8/INT4',c:'reference'},{m:'Size',v:'up to 8×',c:'vs FP32'},{m:'Accuracy',v:'reported',c:'MLP probe'},{m:'Deps',v:'numpy only',c:'no GPU needed'}]},
 
-  'model-registry':{n:'model-registry',area:'MLOps',areaZ:'模型运维',tag:'tag-purple',github:'https://github.com/theraihanrakibb/model-registry',live:'Open-source',
+  'model-registry':{n:'model-registry',area:'MLOps',areaZ:'模型运维',tag:'tag-purple',github:'https://github.com/theraihanrakibb/ml-systems/tree/main/model-registry',live:'Open-source',
     problem:'Model artifacts need reproducible versioning and promotion.',
     problemZ:'模型产物需要可复现的版本管理与晋级。',
     design:'Content-addressed model/dataset registry (mini-MLflow) with aliases and promotion paths.',
@@ -224,7 +224,7 @@ const STUDIES={
       edges:[{from:'up',to:'hash'},{from:'hash',to:'store'},{from:'store',to:'alias'}]},
     bench:[{m:'Dedup',v:'by hash',c:'content-addressable'},{m:'Lookup',v:'O(1)',c:'hash indexed'},{m:'Promotion',v:'alias-based',c:'stage → prod'},{m:'Audit',v:'yes',c:'immutable blobs'}]},
 
-  'rag-pipeline':{n:'rag-pipeline',area:'RAG',areaZ:'检索增强',tag:'tag-blue',github:'https://github.com/theraihanrakibb/rag-pipeline',live:'Open-source',
+  'rag-pipeline':{n:'rag-pipeline',area:'RAG',areaZ:'检索增强',tag:'tag-blue',github:'https://github.com/theraihanrakibb/ml-systems/tree/main/rag-pipeline',live:'Open-source',
     problem:'Retrieval quality depends on the whole ingest → chunk → embed → rerank chain.',
     problemZ:'检索质量取决于入库→切分→嵌入→重排整条链路。',
     design:'Offline RAG toolkit: ingest → chunk → embed → ANN search → rerank with quality metrics.',
@@ -235,7 +235,7 @@ const STUDIES={
       edges:[{from:'ing',to:'chk'},{from:'chk',to:'emb'},{from:'emb',to:'ann'},{from:'ann',to:'rr'}]},
     bench:[{m:'Recall@10',v:'measured',c:'beir-style'},{m:'Latency',v:'ms',c:'ANN + rerank'},{m:'Ingest',v:'docs/s',c:'parallel'},{m:'Index',v:'ANN',c:'FAISS-style'}]},
 
-  'Compiler-C':{n:'Compiler-C',area:'Systems',areaZ:'系统',tag:'tag-pink',github:'https://github.com/theraihanrakibb/Compiler-C',live:'Open-source',
+  'Compiler-C':{n:'Compiler-C',area:'Systems',areaZ:'系统',tag:'tag-pink',github:'https://github.com/theraihanrakibb/ml-deep-learning/tree/main/c-compiler',live:'Open-source',
     problem:'Fast runtimes require understanding lexing, parsing and code generation.',
     problemZ:'高性能运行时需要理解词法、语法分析与代码生成。',
     design:'Complete C compiler front-end: lexer, parser, AST, semantic analysis and three-address code generation (Flex/Bison).',
@@ -246,7 +246,7 @@ const STUDIES={
       edges:[{from:'lex',to:'par'},{from:'par',to:'sem'},{from:'sem',to:'cg'}]},
     bench:[{m:'Passes',v:'4-stage',c:'lex→codegen'},{m:'Grammar',v:'C subset',c:'Flex/Bison'},{m:'Output',v:'TAC',c:'lowerable'},{m:'Tests',v:'sample progs',c:'included'}]},
 
-  'nvfp4-dit':{n:'NVFP4-DiT',area:'Low-Precision',areaZ:'低精度',tag:'tag-pink',github:'https://github.com/theraihanrakibb/NVFP4-DiT',live:'IEEE TNNLS · Under Review',
+  'nvfp4-dit':{n:'NVFP4-DiT',area:'Low-Precision',areaZ:'低精度',tag:'tag-pink',github:'https://github.com/theraihanrakibb/ml-research/tree/main/NVFP4-DiT',live:'IEEE TNNLS · Under Review',
     problem:'Audio-guided video diffusion is memory- and compute-heavy, making long-clip generation impractical on a single GPU.',
     problemZ:'音频引导视频扩散在显存与算力上开销巨大，使得单卡生成长视频不切实际。',
     design:'4-bit (NVFP4) audio-guided video diffusion transformer with FP4-packed Triton kernels, QAT with learnable cross-modal scales, and a vLLM-style serving scheduler (frame-level paged attention, dynamic frame batching).',
