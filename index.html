@@ -466,6 +466,25 @@ body.light .edu-univ a{color:#0e7490}
     <h2 class="sec-title fade-in" data-i18n="exp.title">Experience</h2>
     <div class="timeline">
       <div class="tl-item fade-in"><div class="tl-dot"></div><div class="tl-content">
+        <h3 data-i18n="exp2.h">Research Intern</h3>
+        <div class="tl-meta"><span class="tl-company">Approaching AI · Tsinghua MADSys | Remote</span><span class="tl-period">Nov 2026 &#8211; Present</span></div>
+        <ul>
+          <li data-i18n="exp2.b1">Core development of <strong>Mooncake</strong>, an open-source KV-cache-centric disaggregated LLM serving platform</li>
+          <li data-i18n="exp2.b2">Optimizing the C++ Transfer Engine for RDMA-based data movement across GPU/CPU/SSD tiers</li>
+          <li data-i18n="exp2.b3">Investigating KV-cache offloading for Agentic RL rollouts (tree-structured KV-prefix reuse, memory management)</li>
+          <li data-i18n="exp2.b4">Advisor: Prof. Mingxing Zhang · Technical Mentor: Dr. Ke Yang</li>
+        </ul>
+      </div></div>
+      <div class="tl-item fade-in"><div class="tl-dot"></div><div class="tl-content">
+        <h3 data-i18n="exp3.h">Research Collaborator</h3>
+        <div class="tl-meta"><span class="tl-company">SJTU ReArch Lab | Remote</span><span class="tl-period">Nov 2026 &#8211; Present</span></div>
+        <ul>
+          <li data-i18n="exp3.b1">Hardware-software co-design and low-bit LLM inference (FP8/FP4)</li>
+          <li data-i18n="exp3.b2">Developing &amp; optimizing <strong>CUDA/Triton</strong> kernels for memory/compute trade-offs</li>
+          <li data-i18n="exp3.b3">Advised by Prof. Jingwen Leng &amp; Weiming Hu (PhD)</li>
+        </ul>
+      </div></div>
+      <div class="tl-item fade-in"><div class="tl-dot"></div><div class="tl-content">
         <h3 data-i18n="exp1.h">AI Infrastructure Engineer Intern</h3>
         <div class="tl-meta"><span class="tl-company">InfiX.ai | Shenzhen</span><span class="tl-period">Apr 2026 &#8211; Jun 2026</span></div>
         <ul>
@@ -642,6 +661,15 @@ const I18N={
     'exp1.b4':'Nsight Systems profiling: GEMM = <strong>60%</strong> of step time; FP8 KV cache halves per-token memory (72.9&#8594;36.5 KB)',
     'exp1.b5':'Deployed Qwen3-235B-A22B-FP8 (235B MoE) on 2&times;H200; benchmarked DeepSeek-V3.2 on 8&times;H200 &#8212; <strong>91 ms TTFT / 36 ms TPOT</strong> @32&#8211;64, <strong>13.16 req/s</strong> @256',
     'exp1.b6':'Owned root-cause analysis for 12+ production incidents (RDMA, etcd, storage, distributed inference)',
+    'exp2.h':'Research Intern',
+    'exp2.b1':'Core development of <strong>Mooncake</strong>, an open-source KV-cache-centric disaggregated LLM serving platform',
+    'exp2.b2':'Optimizing the C++ Transfer Engine for RDMA-based data movement across GPU/CPU/SSD tiers',
+    'exp2.b3':'Investigating KV-cache offloading for Agentic RL rollouts (tree-structured KV-prefix reuse, memory management)',
+    'exp2.b4':'Advisor: Prof. Mingxing Zhang · Technical Mentor: Dr. Ke Yang',
+    'exp3.h':'Research Collaborator',
+    'exp3.b1':'Hardware-software co-design and low-bit LLM inference (FP8/FP4)',
+    'exp3.b2':'Developing &amp; optimizing <strong>CUDA/Triton</strong> kernels for memory/compute trade-offs',
+    'exp3.b3':'Advised by Prof. Jingwen Leng &amp; Weiming Hu (PhD)',
     'res.title':'Research &amp; <span>Publications</span>',
     'res1.tag':'IEEE TNNLS (Under Review)','res1.h':'NVFP4-DiT: 4-Bit Audio-Guided Video Diffusion',
     'res1.r':'4&times; memory reduction; FP4 Triton kernels <strong>3.2&times; faster than FP16</strong> (2.1&times; vs naive FP4) at competitive quality',
@@ -690,6 +718,15 @@ const I18N={
     'exp1.b4':'使用 Nsight Systems 分析：GEMM 占单步耗时 <strong>60%</strong>；FP8 KV 缓存将单 token 显存减半（72.9&#8594;36.5 KB）',
     'exp1.b5':'在 2×H200 部署 Qwen3-235B-A22B-FP8（235B MoE）；在 8×H200 基准测试 DeepSeek-V3.2——<strong>91 ms TTFT / 36 ms TPOT</strong>（32&#8211;64 并发）、<strong>13.16 req/s</strong>（256 并发）',
     'exp1.b6':'主导 12+ 生产故障根因分析（RDMA、etcd、存储、分布式推理）',
+    'exp2.h':'研究实习生',
+    'exp2.b1':'核心开发开源 KV 缓存为中心的分离式 LLM 推理平台 <strong>Mooncake</strong>',
+    'exp2.b2':'优化 C++ Transfer Engine 的 RDMA 数据传输（GPU/CPU/SSD 多级）',
+    'exp2.b3':'研究 Agentic RL rollout 的 KV 缓存卸载（树状 KV 前缀复用、显存管理）',
+    'exp2.b4':'导师：张明星教授 · 技术导师：杨柯博士',
+    'exp3.h':'研究合作者',
+    'exp3.b1':'软硬件协同设计与低比特 LLM 推理（FP8/FP4）',
+    'exp3.b2':'开发并优化 <strong>CUDA/Triton</strong> 算子，权衡显存与算力',
+    'exp3.b3':'导师：冷敬文教授、胡伟明（博士）',
     'res.title':'研究<span>与发表</span>',
     'res1.tag':'IEEE TNNLS（审稿中）','res1.h':'NVFP4-DiT：4-bit 音频引导视频扩散',
     'res1.r':'显存降低 4×；FP4 Triton 算子<strong>相较 FP16 提速 3.2×</strong>（相较朴素 FP4 提速 2.1×），生成质量具有竞争力',
