@@ -488,12 +488,12 @@ body.light .edu-univ a{color:#0e7490}
         <h3 data-i18n="exp1.h">AI Infrastructure Engineer Intern</h3>
         <div class="tl-meta"><span class="tl-company">InfiX.ai | Shenzhen</span><span class="tl-period">Apr 2026 &#8211; Jun 2026</span></div>
         <ul>
-          <li data-i18n="exp1.b1">Built 3-tier KV-cache offload (GPU HBM&#8594;CPU DRAM&#8594;SSD) over Mooncake RDMA for Qwen3.5/3.6-27B on 4&times;A800-80GB &#8212; <strong>92% hit</strong>, <strong>8.3&times; TTFT</strong> (55s&#8594;6.7s), 32K+ context</li>
-          <li data-i18n="exp1.b2">2+2 GPU prefill/decode disaggregation with RDMA KV transfer &#8212; concurrency <strong>192&#8594;256</strong></li>
-          <li data-i18n="exp1.b3">Patched SGLang internals (kvcacheio.py, memory_pool_host.py, hi_mamba_radix_cache.py) across <strong>v0.5.9</strong> / <strong>v0.5.10-post2</strong></li>
-          <li data-i18n="exp1.b4">Nsight Systems profiling: GEMM = <strong>60%</strong> of step time; FP8 KV cache halves per-token memory (72.9&#8594;36.5 KB)</li>
-          <li data-i18n="exp1.b5">Deployed Qwen3-235B-A22B-FP8 (235B MoE) on 2&times;H200; benchmarked DeepSeek-V3.2 on 8&times;H200 &#8212; <strong>91 ms TTFT / 36 ms TPOT</strong> @32&#8211;64, <strong>13.16 req/s</strong> @256</li>
-          <li data-i18n="exp1.b6">Owned root-cause analysis for 12+ production incidents (RDMA, etcd, storage, distributed inference)</li>
+          <li data-i18n="exp1.b1">Achieved an <strong>8.3&times; reduction in TTFT</strong> (55s &#8594;6.7s) and a <strong>92% cache hit rate</strong> through three-tier KV-cache offloading (GPU HBM &#8594;CPU DRAM &#8594;SSD) over Mooncake RDMA for Qwen3.5/3.6-27B workloads with 32K+ context lengths</li>
+          <li data-i18n="exp1.b2">Increased stable serving concurrency by <strong>33% (192 &#8594;256)</strong> through 2+2 GPU prefill-decode disaggregation, RDMA-based KV transfer, RadixAttention prefix caching, and continuous batching</li>
+          <li data-i18n="exp1.b3">Modified SGLang cache and memory-management internals, including kvcacheio.py, memory_pool_host.py, and hi_mamba_radix_cache.py, to support hybrid-attention workloads across different SGLang versions</li>
+          <li data-i18n="exp1.b4">Used Nsight Systems to profile inference execution, identifying GEMM operations as approximately <strong>60%</strong> of step time</li>
+          <li data-i18n="exp1.b5">Evaluated FP8 KV-cache optimization, reducing per-token KV memory consumption from <strong>72.9 KB to 36.5 KB</strong></li>
+          <li data-i18n="exp1.b6">Deployed Qwen3-235B-A22B-FP8 on 2&times; H200 GPUs and benchmarked DeepSeek-V3.2 FP8 on 8&times; H200 GPUs &#8212; <strong>91 ms TTFT / 36 ms TPOT</strong> @32&#8211;64, <strong>13.16 req/s</strong> @256</li>
         </ul>
       </div></div>
 
@@ -655,12 +655,12 @@ const I18N={
     'about.edu.h':'Education','about.edu.p':'M.Eng. Software Engineering @ Northwestern Polytechnical University (985/211), Top 1%, GPA 88/100. Chinese Government Scholarship.',
     'exp.title':'Experience',
     'exp1.h':'AI Infrastructure Engineer Intern',
-    'exp1.b1':'Built 3-tier KV-cache offload (GPU HBM&#8594;CPU DRAM&#8594;SSD) over Mooncake RDMA for Qwen3.5/3.6-27B on 4&times;A800-80GB &#8212; <strong>92% hit</strong>, <strong>8.3&times; TTFT</strong> (55s&#8594;6.7s), 32K+ context',
-    'exp1.b2':'2+2 GPU prefill/decode disaggregation with RDMA KV transfer &#8212; concurrency <strong>192&#8594;256</strong>',
-    'exp1.b3':'Patched SGLang internals (kvcacheio.py, memory_pool_host.py, hi_mamba_radix_cache.py) across <strong>v0.5.9</strong> / <strong>v0.5.10-post2</strong>',
-    'exp1.b4':'Nsight Systems profiling: GEMM = <strong>60%</strong> of step time; FP8 KV cache halves per-token memory (72.9&#8594;36.5 KB)',
-    'exp1.b5':'Deployed Qwen3-235B-A22B-FP8 (235B MoE) on 2&times;H200; benchmarked DeepSeek-V3.2 on 8&times;H200 &#8212; <strong>91 ms TTFT / 36 ms TPOT</strong> @32&#8211;64, <strong>13.16 req/s</strong> @256',
-    'exp1.b6':'Owned root-cause analysis for 12+ production incidents (RDMA, etcd, storage, distributed inference)',
+    'exp1.b1':'Achieved an <strong>8.3&times; reduction in TTFT</strong> (55s &#8594;6.7s) and a <strong>92% cache hit rate</strong> through three-tier KV-cache offloading (GPU HBM &#8594;CPU DRAM &#8594;SSD) over Mooncake RDMA for Qwen3.5/3.6-27B workloads with 32K+ context lengths',
+    'exp1.b2':'Increased stable serving concurrency by <strong>33% (192 &#8594;256)</strong> through 2+2 GPU prefill-decode disaggregation, RDMA-based KV transfer, RadixAttention prefix caching, and continuous batching',
+    'exp1.b3':'Modified SGLang cache and memory-management internals, including kvcacheio.py, memory_pool_host.py, and hi_mamba_radix_cache.py, to support hybrid-attention workloads across different SGLang versions',
+    'exp1.b4':'Used Nsight Systems to profile inference execution, identifying GEMM operations as approximately <strong>60%</strong> of step time',
+    'exp1.b5':'Evaluated FP8 KV-cache optimization, reducing per-token KV memory consumption from <strong>72.9 KB to 36.5 KB</strong>',
+    'exp1.b6':'Deployed Qwen3-235B-A22B-FP8 on 2&times; H200 GPUs and benchmarked DeepSeek-V3.2 FP8 on 8&times; H200 GPUs &#8212; <strong>91 ms TTFT / 36 ms TPOT</strong> @32&#8211;64, <strong>13.16 req/s</strong> @256',
     'exp2.h':'Research Intern',
     'exp2.b1':'Core development of <strong>Mooncake</strong>, an open-source KV-cache-centric disaggregated LLM serving platform',
     'exp2.b2':'Optimizing the C++ Transfer Engine for RDMA-based data movement across GPU/CPU/SSD tiers',
@@ -712,12 +712,12 @@ const I18N={
     'about.edu.h':'教育','about.edu.p':'西北工业大学（985/211）软件工程硕士，前 1%，GPA 88/100。中国政府奖学金。',
     'exp.title':'经历',
     'exp1.h':'AI 基础设施工程师（实习）',
-    'exp1.b1':'基于 Mooncake RDMA 为 4×A800-80GB 上的 Qwen3.5/3.6-27B 构建三级 KV 缓存卸载（GPU HBM&#8594;CPU DRAM&#8594;SSD）——<strong>92% 命中率</strong>、<strong>8.3× TTFT</strong>（55s&#8594;6.7s），32K+ 上下文',
-    'exp1.b2':'2+2 GPU prefill/decode 分离与 RDMA KV 传输——并发 <strong>192&#8594;256</strong>',
-    'exp1.b3':'跨 <strong>v0.5.9</strong> / <strong>v0.5.10-post2</strong> 修改 SGLang 内部模块（kvcacheio.py、memory_pool_host.py、hi_mamba_radix_cache.py）',
-    'exp1.b4':'使用 Nsight Systems 分析：GEMM 占单步耗时 <strong>60%</strong>；FP8 KV 缓存将单 token 显存减半（72.9&#8594;36.5 KB）',
-    'exp1.b5':'在 2×H200 部署 Qwen3-235B-A22B-FP8（235B MoE）；在 8×H200 基准测试 DeepSeek-V3.2——<strong>91 ms TTFT / 36 ms TPOT</strong>（32&#8211;64 并发）、<strong>13.16 req/s</strong>（256 并发）',
-    'exp1.b6':'主导 12+ 生产故障根因分析（RDMA、etcd、存储、分布式推理）',
+    'exp1.b1':'通过 Mooncake RDMA 三级 KV 缓存卸载（GPU HBM &#8594;CPU DRAM &#8594;SSD）将长上下文 TTFT 降低 <strong>8.3×</strong>（55s&#8594;6.7s），并实现 <strong>92% 缓存命中率</strong>，服务于 Qwen3.5/3.6-27B、32K+ 上下文',
+    'exp1.b2':'通过 2+2 GPU prefill-decode 分离、RDMA KV 传输、RadixAttention 前缀缓存与连续批处理，将稳定并发提升 <strong>33%（192&#8594;256）</strong>',
+    'exp1.b3':'修改 SGLang 缓存与显存管理内部模块（kvcacheio.py、memory_pool_host.py、hi_mamba_radix_cache.py），以适配混合注意力负载与不同 SGLang 版本',
+    'exp1.b4':'使用 Nsight Systems 剖析推理执行，定位 GEMM 约占单步耗时 <strong>60%</strong>',
+    'exp1.b5':'评估 FP8 KV 缓存优化，将单 token KV 显存从 <strong>72.9 KB 降至 36.5 KB</strong>',
+    'exp1.b6':'在 2×H200 部署 Qwen3-235B-A22B-FP8，并在 8×H200 上对 DeepSeek-V3.2 FP8 基准测试——<strong>91 ms TTFT / 36 ms TPOT</strong>（32&#8211;64 并发）、<strong>13.16 req/s</strong>（256 并发）',
     'exp2.h':'研究实习生',
     'exp2.b1':'核心开发开源 KV 缓存为中心的分离式 LLM 推理平台 <strong>Mooncake</strong>',
     'exp2.b2':'优化 C++ Transfer Engine 的 RDMA 数据传输（GPU/CPU/SSD 多级）',
